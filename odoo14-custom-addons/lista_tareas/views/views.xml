@@ -43,6 +43,8 @@
 
     <menuitem name="Mostrar lista" id="lista_tareas.menu_1_list" parent="lista_tareas.menu_1"
               action="lista_tareas.action_window"/>
+    <menuitem name="Ajustes" id="ajustes" parent="lista_tareas.menu_1"
+              action="lista_tareas.action_window"/>
 
   </data>
 </odoo>
