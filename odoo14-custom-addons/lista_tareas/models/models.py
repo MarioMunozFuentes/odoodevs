@@ -13,6 +13,13 @@ class lista_tareas(models.Model):
     # https://www.odoo.com/documentation/14.0/developer/reference/addons/orm.html#fields
    
     tarea = fields.Char()
+
+    #añadimos fecha
+    fecha = fields.Date()
+
+    #añadimos un formato para el avatar 
+    avatar = fields.Image('Imagen tarea', max_width=50, max_heigth=50)
+
     prioridad = fields.Integer()
     urgente = fields.Boolean(compute="_value_urgente", store=True)
     realizada = fields.Boolean()
