@@ -7,15 +7,15 @@
       <field name="name">lista_tareas list</field>
       <field name="model">lista_tareas.lista_tareas</field>
       <field name="arch" type="xml">
-        <tree>
+        <tree decoration-success="realizada == True" decoration-danger="realizada == False"> <!-- cambiar el color de las tareas, dependiendo de  si estan realizadas o no -->
         <!-- añadimos que el usuario puede subir una imagen-->
           <field name="avatar" widget="image" class="oe_avatar"/>
+        <!-- añadimos el campo fecha-->
+          <field name="fecha"/>
           <field name="tarea"/>
-          <field name="prioridad"/>
+          <field name="prioridad" widget="percentpie"/> <!-- para poner el porcentaje en la lista de tareas-->
           <field name="urgente"/>
           <field name="realizada"/>
-          <!-- añadimos el campo fecha-->
-          <field name="fecha"/>
         </tree>
       </field>
     </record>
