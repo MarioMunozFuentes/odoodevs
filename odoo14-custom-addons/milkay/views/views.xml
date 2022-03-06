@@ -1,7 +1,7 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-<!--
+
     <record model="ir.ui.view" id="milkay.list">
       <field name="name">milkay list</field>
       <field name="model">milkay.milkay</field>
@@ -13,16 +13,16 @@
         </tree>
       </field>
     </record>
--->
+
 
     <!-- actions opening views on models -->
-<!--
+
     <record model="ir.actions.act_window" id="milkay.action_window">
       <field name="name">milkay window</field>
       <field name="res_model">milkay.milkay</field>
       <field name="view_mode">tree,form</field>
     </record>
--->
+
 
     <!-- server action to the one above -->
 <!--
@@ -41,20 +41,22 @@
 -->
 
     <!-- Top menu item -->
-<!--
+
     <menuitem name="milkay" id="milkay.menu_root"/>
--->
+
     <!-- menu categories -->
-<!--
+
     <menuitem name="Menu 1" id="milkay.menu_1" parent="milkay.menu_root"/>
     <menuitem name="Menu 2" id="milkay.menu_2" parent="milkay.menu_root"/>
--->
+
     <!-- actions -->
-<!--
-    <menuitem name="List" id="milkay.menu_1_list" parent="milkay.menu_1"
+    <menuitem name="Submenu1" id="milkay.menu_20" parent="milkay.menu_1"
               action="milkay.action_window"/>
-    <menuitem name="Server to list" id="milkay" parent="milkay.menu_2"
-              action="milkay.action_server"/>
--->
+
+    <menuitem name="Submenu1" id="milkay.menu_21" parent="milkay.menu_2"
+              action="milkay.action_window"/>
+    <menuitem name="Submenu2" id="milkay.menu_22" parent="milkay.menu_2"
+              action="milkay.action_window"/>
+
   </data>
 </odoo>
