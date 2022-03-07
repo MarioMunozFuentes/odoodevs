@@ -1,28 +1,31 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-<!--
+
     <record model="ir.ui.view" id="infame2.list">
       <field name="name">infame2 list</field>
       <field name="model">infame2.infame2</field>
       <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+        <tree decoration-danger="score&lt;25">
+          <field name="title"/>
+          <field name="date"/>
+          <field name="score" widget="percentpie"/>
+          <field name="distributor"/>
+          <field name="publisher"/>
+          <field name="favs"/>
         </tree>
       </field>
     </record>
--->
+
 
     <!-- actions opening views on models -->
-<!--
+
     <record model="ir.actions.act_window" id="infame2.action_window">
       <field name="name">infame2 window</field>
       <field name="res_model">infame2.infame2</field>
       <field name="view_mode">tree,form</field>
     </record>
--->
+
 
     <!-- server action to the one above -->
 <!--
@@ -41,20 +44,20 @@
 -->
 
     <!-- Top menu item -->
-<!--
+
     <menuitem name="infame2" id="infame2.menu_root"/>
--->
+
     <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="infame2.menu_1" parent="infame2.menu_root"/>
-    <menuitem name="Menu 2" id="infame2.menu_2" parent="infame2.menu_root"/>
--->
+
+    <menuitem name="Website" id="infame2.menu_1" parent="infame2.menu_root" action="infame2.action_window"/>
+    <menuitem name="Forum" id="infame2.menu_2" parent="infame2.menu_root"/>
+
     <!-- actions -->
-<!--
-    <menuitem name="List" id="infame2.menu_1_list" parent="infame2.menu_1"
+
+    <menuitem name="Forum" id="infame2.menu_2_films" parent="infame2.menu_2"
               action="infame2.action_window"/>
-    <menuitem name="Server to list" id="infame2" parent="infame2.menu_2"
-              action="infame2.action_server"/>
--->
+    <menuitem name="Games" id="infame2.menu_2_games" parent="infame2.menu_2"
+              action="infame2.action_window"/>
+
   </data>
 </odoo>
