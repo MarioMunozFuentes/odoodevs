@@ -6,10 +6,10 @@
       <field name="name">infame2 list</field>
       <field name="model">infame2.infame2</field>
       <field name="arch" type="xml">
-        <tree decoration-danger="score&lt;25">
+        <tree decoration-danger="score&lt;25"> <!-- Aqui indicamos que lo ponemos en rojo, cuando score es menor que 25-->
           <field name="title"/>
           <field name="date"/>
-          <field name="score" widget="percentpie"/>
+          <field name="score" widget="percentpie"/> <!-- Aqui indicamos que score va a ser de tipo porcentaje-->
           <field name="distributor"/>
           <field name="publisher"/>
           <field name="favs"/>
@@ -18,7 +18,7 @@
     </record>
 
 
-    <!-- actions opening views on models -->
+    <!-- actions opening views on models --> <!-- LO DESCOMENTAMOS Y NO TOCAMOS NADA-->
 
     <record model="ir.actions.act_window" id="infame2.action_window">
       <field name="name">infame2 window</field>
@@ -27,7 +27,7 @@
     </record>
 
 
-    <!-- server action to the one above -->
+    <!-- server action to the one above --> <!-- LO DEJAMOS COMENTADO YA QUE NO LO VAMOS A USAR-->
 <!--
     <record model="ir.actions.server" id="infame2.action_server">
       <field name="name">infame2 server</field>
@@ -48,12 +48,12 @@
     <menuitem name="infame2" id="infame2.menu_root"/>
 
     <!-- menu categories -->
-
-    <menuitem name="Website" id="infame2.menu_1" parent="infame2.menu_root" action="infame2.action_window"/>
+    <!-- Indicamos los nombres de los menus-->
+    <menuitem name="Website" id="infame2.menu_1" parent="infame2.menu_root" action="infame2.action_window"/> <!--Ponemos esto para que aparezca sin tener ningun submenu-->
     <menuitem name="Forum" id="infame2.menu_2" parent="infame2.menu_root"/>
 
     <!-- actions -->
-
+    <!-- Indicamos los nombres de los submenus-->
     <menuitem name="Forum" id="infame2.menu_2_films" parent="infame2.menu_2"
               action="infame2.action_window"/>
     <menuitem name="Games" id="infame2.menu_2_games" parent="infame2.menu_2"

@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="infame_avanzado.list">
+      <field name="name">infameAvanzado list</field>
+      <field name="model">infame_avanzado.infame_avanzado</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="infame_avanzado.action_window">
+      <field name="name">infameAvanzado window</field>
+      <field name="res_model">infame_avanzado.infame_avanzado</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="infame_avanzado.action_server">
+      <field name="name">infameAvanzado server</field>
+      <field name="model_id" ref="model_infame_avanzado_infame_avanzado"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="infameAvanzado" id="infame_avanzado.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="infame_avanzado.menu_1" parent="infame_avanzado.menu_root"/>
+    <menuitem name="Menu 2" id="infame_avanzado.menu_2" parent="infame_avanzado.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="infame_avanzado.menu_1_list" parent="infame_avanzado.menu_1"
+              action="infame_avanzado.action_window"/>
+    <menuitem name="Server to list" id="infame_avanzado" parent="infame_avanzado.menu_2"
+              action="infame_avanzado.action_server"/>
+-->
+  </data>
+</odoo>
