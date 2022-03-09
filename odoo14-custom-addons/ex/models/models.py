@@ -1,18 +1,24 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+
+from odoo import models, fields, api
 
 
-# class ex(models.Model):
-#     _name = 'ex.ex'
-#     _description = 'ex.ex'
+class ex(models.Model):
+    _name = 'ex.ex'
+    _description = 'ex.ex'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+    title = fields.Char()
+    date = fields.Date()
+    score = fields.Float()
+    distributor = fields.Char()
+    publisher = fields.Char()
+    favs = fields.Boolean(compute="_value_favs", store=True)
+
+    @api.depends('score')
+    def _value_favs(self):
+        for record in self:
+            if record.score>75:
+                record.favs = True
+            else:
+                record.favs = False
